@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://ns.adobe.com/acrobat/workflow/2012" title="Aplicar_OCR_Salvando_em_txt" description="" majorVersion="1" minorVersion="0">
+	<Group label="Sem nome">
+		<Command name="Cpt:CapturePages" pauseBefore="false" promptUser="false">
+			<Items>
+				<Item name="Downsample" type="integer" value="150"/>
+				<Item name="Format" type="integer" value="0"/>
+				<Item name="Language" type="integer" value="84"/>
+			</Items>
+		</Command>
+		<Command name="WorkflowPlaybackSaveFiles" pauseBefore="false" promptUser="false">
+			<Items>
+				<Item name="AddToBaseName" type="boolean" value="true"/>
+				<Item name="DocSaveDestType" type="string" value="WorkflowPlaybackSaveInAFolder"/>
+				<Item name="DontOverwrite" type="boolean" value="true"/>
+				<Item name="EmbedIndex" type="boolean" value="false"/>
+				<Item name="FS" type="atom" value="DOS"/>
+				<Item name="FileVariation" type="integer" value="0"/>
+				<Item name="HandleOutput" type="boolean" value="true"/>
+				<Item name="InsertAfterBaseName" type="text" value=""/>
+				<Item name="OptimizePDF" type="boolean" value="true"/>
+				<Item name="PreselectedFolderPath" type="text" value="/C/SaidaPdf"/>
+				<Item name="PresetName" type="text" value="Padrão"/>
+				<Item name="RunPDFOptimizer" type="boolean" value="false"/>
+			</Items>
+		</Command>
+		<Command name="Scan:OPT" pauseBefore="false" promptUser="false">
+			<Items>
+				<Item name="ApplyMRC" type="boolean" value="true"/>
+				<Item name="BkgrRemove" type="integer" value="0"/>
+				<Item name="ColorCompression" type="integer" value="4"/>
+				<Item name="Descreen" type="integer" value="1"/>
+				<Item name="Deskew" type="integer" value="1"/>
+				<Item name="Format" type="integer" value="1"/>
+				<Item name="Language" type="integer" value="-1"/>
+				<Item name="MonoCompression" type="integer" value="1"/>
+				<Item name="QualityLevel" type="integer" value="1"/>
+				<Item name="TextSharpen" type="integer" value="1"/>
+				<Item name="doOCR" type="boolean" value="true"/>
+			</Items>
+		</Command>
+		<Command name="WorkflowPlaybackSaveFiles" pauseBefore="false" promptUser="false">
+			<Items>
+				<Item name="AddToBaseName" type="boolean" value="true"/>
+				<Item name="DocSaveDestType" type="string" value="WorkflowPlaybackSave"/>
+				<Item name="DontOverwrite" type="boolean" value="true"/>
+			</Items>
+		</Command>
+		<Command name="WorkflowPlaybackSaveFiles" pauseBefore="false" promptUser="false">
+			<Items>
+				<Item name="AddToBaseName" type="boolean" value="false"/>
+				<Item name="DocSaveDestType" type="string" value="WorkflowPlaybackSaveInAFolder"/>
+				<Item name="DontOverwrite" type="boolean" value="true"/>
+				<Item name="EmbedIndex" type="boolean" value="false"/>
+				<Item name="FS" type="atom" value="DOS"/>
+				<Item name="FileVariation" type="integer" value="0"/>
+				<Item name="HandleOutput" type="boolean" value="true"/>
+				<Item name="HandlerUniqueID" type="string" value="com.adobe.acrobat.plain-text"/>
+				<Item name="InsertAfterBaseName" type="text" value=""/>
+				<Item name="InsertBeforeBaseName" type="text" value=""/>
+				<Item name="NumbericNaming" type="boolean" value="false"/>
+				<Item name="OptimizePDF" type="boolean" value="true"/>
+				<Item name="PreselectedFolderPath" type="text" value="/C/SaidaTxt"/>
+				<Item name="PresetName" type="text" value="Padrão"/>
+				<Item name="RunPDFOptimizer" type="boolean" value="false"/>
+			</Items>
+		</Command>
+	</Group>
+</Workflow>
